@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF_8" />
+        <meta name="viewport"  content="width=device-width , initial-scale=1.0" />
+        <title> Job Portal </title>
+        <style>
+            body{
+                font-family: 'Lucida Sans',  sans-serif;
+                background: whitesmoke;
+            }
+
+            .container{
+                width: 500px;
+                margin: 80px auto;
+                background: rgb(218, 235, 153);
+                padding: 20px;
+                border-radius:20px ;
+            }
+            h2{
+                text-align: center;    
+            }
+
+            input,select,button{
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+           .error{
+                color: red;
+                font-size: 14px;
+                }
+
+            .success{
+                    color: rgb(6, 229, 6);
+                    margin-top: 15px;
+                    font-weight: bold;
+                }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h2> Job Application</h2>
+
+        <input type="text" id="name" placeholder="Full Name" /> <br>
+        <div id="nameError" class="error" > </div>  <br/>
+
+            <input type="email" id="email" placeholder="Email Address" /> <br>
+            <div id="emailError" class="error" > </div> <br/>
+            <select id="experience"> <br>
+                <option value=""> Select Experience</option>
+                <option value="fresher"> fresher</option>
+                <option value="1-3"> 1-3 years</option>
+                <option value="3-5"> 3-5 years</option>
+                <option value="5+"> 5+ years</option>
+            </select>
+                <div id="expError" class="error" > </div>    <br> 
+
+                    <button onclick="validateForm()">Apply Job</button>
+                    <div id="successMsg" class="success"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+
+            // clear previous messages using loop
+            let errorFields= document.getElementsByClassName("error");
+            for(let i=0;i<errorFields.length;i++)
+            {
+                errorFields[i].innerHTML="";
+            }
+            document.getElementById("successMsg").innerHTML="";
+
+
+            // reading input values
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let experience=document.getElementById("experience").value;
+
+            let isValid=true;
+
+            //if//else validation
+            if(name==="")
+            {
+               document.getElementById("nameError").innerHTML="Name is required";
+        isValid=false; 
+            }
+            else if(name.length <3)
+            {
+                document.getElementById("nameError").innerHTML="Name must be atleast 3 characters";
+                isValid=false;
+            }
+
+            //Email validation using if
+
+            if(email==="")
+            {
+                document.getElementById("emailError").innerHTML="Email is required";
+                isValid=false;
+            }
+
+            // switch case validation
+            switch(experience)
+            {
+                case "":
+                document.getElementById("expError").innerHTML="Please select experience";
+                isValid=false;
+                break;
+
+                case "fresher":
+                    console.log("fresher selected");
+                    break;
+
+                case "1-3":
+                    console.log("1-3 years experience");
+                    break;
+
+                case "3-5":
+                    console.log("3-5 years experience");
+                    break;
+
+                case "5+":
+                    console.log("5+ years experience");
+                    break;
+            }
+        
+
+            // final success message 
+
+            if(isValid===true)
+        {
+            document.getElementById("successMsg").innerText="Application submitted successfully!";
+        }
+    }
+    </script>
+</body>
+</html>

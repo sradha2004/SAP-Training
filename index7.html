@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF_8" />
+        <meta name="viewport"  content="width=device-width , initial-scale=1.0" />
+        <title> Job Portal </title>
+        </head>
+        <body>
+            <h2>job portal - candidate Registration</h2>
+            <div class="container">
+                <label>name</label>
+                <input type="text" id="name"/>
+                <label>email</label>
+                <input type="email" id="email"/>
+                <label>skill</label>
+                <input type="text" id=""skill/>
+                <button onclick="showDetails()">submit</button>
+                <div class="output" id="result"></div>
+            </div>
+            <script>
+                function showDetails(){
+                    let name=document.getElementById("name").value;
+                    let email=document.getElementById("email").value;
+                    let skill=document.querySelector("#skill").value;
+                    let output=document.getElementById("result");
+                    output.innerHTML= `
+                    <h3>candidate Details</h3>
+                    <p><strong>name:</strong>${name}</p>
+                    <p><strong>email:</strong>${name}</p>
+                    <p><strong>skill:</strong>${name}</p>
+                    `;
+                    output.style.display="block";
+                }
+            </script>
+        </body>
+        </html>

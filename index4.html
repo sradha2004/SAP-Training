@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta  charset="='UTF-8"/>
+        <title>Training & Job Portal</title>
+        <link href="https://fonts.googleapis.com/css2?family=poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styleused/style.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class="fw-bold">skillup Training portal</h1>
+            <p>Learn.build.Get Hired.</p>
+            </div>
+        </header>
+        <section class="course-section">
+            <div class="container">
+            <h2 class="text-center mb-5">Available courses</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card course-card shadow">
+                        <div class="card-body text-center">
+                    <h3 class="card-title">java full stack</h3>
+                    <P class="card-text">Python,Django,REST API, React</P>
+                    <span class="badge bg primary mb-3">5 months</span>
+                    <button class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Apply now</button>
+                </div>
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="card course-card shadow">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">python full stack</h3>
+                            <p class="card-text">python,Django,REST</p>
+                                <span class="badge bg-success mb-3">5 month</span>
+                    <button class="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Apply Now</button>
+                </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card course-card shadow">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Data Analytics</h3>
+                            <p class="card-text">excel,sql,python,powerbi</p>
+                    <span class="badge bg-primary mb-3">4 Months</span>
+                    <button class="btn btn-warning text-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Apply Now</button>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <div class="modal fade" id="loginModel" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">login to apply</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email adddress</label>
+                            <input type="email"
+                            class="form-control"
+                            placeholder="enter email"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">password</label>
+                                <input type="password" class="form-control" placeholder="Enter password" />
+                                </div>
+                                <button typr="submit" class="btn btn-primary w-100">Login</button>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="small mb-0">Don't have an account?<a href="#">Register</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
